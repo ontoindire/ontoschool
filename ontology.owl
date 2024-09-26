@@ -1,17 +1,2137 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/lgu/ontologies/2024/8/untitled-ontology-110/"
-     xml:base="http://www.semanticweb.org/lgu/ontologies/2024/8/untitled-ontology-110/"
+<rdf:RDF xmlns="https://w3id.org/ontoindire/ontoschool"
+     xml:base="https://w3id.org/ontoindire/ontoschool"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:l0="https://w3id.org/italia/onto/l0/"
+     xmlns:ns="http://www.w3.org/2006/vcard/ns#"
+     xmlns:CLV="https://w3id.org/italia/onto/CLV/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:ADMS="https://w3id.org/italia/onto/ADMS/"
+     xmlns:dcat="http://www.w3.org/ns/dcat#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/ontoindire/ontoschool">
-        <owl:imports rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <owl:imports rdf:resource="https://w3id.org/italia/onto/AccessCondition/0.1"/>
+        <owl:imports rdf:resource="https://w3id.org/italia/onto/CLV/1.0"/>
+        <owl:imports rdf:resource="https://w3id.org/italia/onto/COV/0.12"/>
+        <owl:imports rdf:resource="https://w3id.org/italia/onto/CPSV/1.1"/>
+        <owl:imports rdf:resource="https://w3id.org/italia/onto/CPV/0.8"/>
+        <owl:imports rdf:resource="https://w3id.org/italia/onto/Language/0.1"/>
+        <owl:imports rdf:resource="https://w3id.org/italia/onto/MU/0.4"/>
+        <owl:imports rdf:resource="https://w3id.org/italia/onto/RO/0.3"/>
+        <owl:imports rdf:resource="https://w3id.org/italia/onto/SM/0.7"/>
+        <owl:imports rdf:resource="https://w3id.org/italia/onto/TI/0.8"/>
+        <owl:imports rdf:resource="https://w3id.org/italia/onto/l0/0.8"/>
         <terms:title>OntoSchool</terms:title>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/ns/prov#wasDerivedFrom -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/italia/onto/COV/hasCategory -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/COV/hasCategory">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/COV/PublicOrganization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/italia/onto/COV/hasLegalStatus -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/COV/hasLegalStatus"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/COV/hasPublicOrgActivityType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/COV/hasPublicOrgActivityType">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/COV/PublicOrganization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/italia/onto/COV/hasPublicOrganization -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/COV/hasPublicOrganization">
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/COV/PublicOrganization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/italia/onto/COV/isPublicOrganizationOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/COV/isPublicOrganizationOf">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/COV/PublicOrganization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/italia/onto/RO/forEntity -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/RO/forEntity"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/RO/holdsRoleInTime -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/RO/holdsRoleInTime"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/RO/isRoleIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/RO/isRoleIn"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/RO/isRoleInTimeOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/RO/isRoleInTimeOf"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/RO/isRoleOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/RO/isRoleOf"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/RO/withRole -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/RO/withRole"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/TI/hasTemporalEntity -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/TI/hasTemporalEntity"/>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/accreditatoDa -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontoindire/ontoschool/accreditatoDa">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:label xml:lang="it">accreditato da</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/amministra -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontoindire/ontoschool/amministra">
+        <owl:inverseOf rdf:resource="https://w3id.org/ontoindire/ontoschool/èamministratoDa"/>
+        <rdfs:label xml:lang="it">amministra</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/attiva -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontoindire/ontoschool/attiva">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="https://w3id.org/ontoindire/ontoschool/PercorsoIstruzione"/>
+        <rdfs:label xml:lang="it">attiva</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/attivatoDa -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontoindire/ontoschool/attivatoDa">
+        <rdfs:domain rdf:resource="https://w3id.org/ontoindire/ontoschool/PercorsoIstruzione"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:label xml:lang="it">attivato da</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/collaboraCon -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontoindire/ontoschool/collaboraCon">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:label xml:lang="it">collabora con</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/compostoDa -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontoindire/ontoschool/compostoDa">
+        <owl:inverseOf rdf:resource="https://w3id.org/ontoindire/ontoschool/eParteDi"/>
+        <rdfs:label xml:lang="it">composto da</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/eParteDi -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontoindire/ontoschool/eParteDi">
+        <rdfs:label xml:lang="it">è parte di</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/eroga -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontoindire/ontoschool/eroga">
+        <owl:inverseOf rdf:resource="https://w3id.org/ontoindire/ontoschool/èErogatoDa"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ontoindire/ontoschool/Plesso"/>
+        <rdfs:label xml:lang="it">eroga</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/frequentaClasse -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontoindire/ontoschool/frequentaClasse">
+        <rdfs:range rdf:resource="https://w3id.org/ontoindire/ontoschool/Classe"/>
+        <rdfs:label xml:lang="it">frequenta classe (NON USATO)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/frequentaSezione -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontoindire/ontoschool/frequentaSezione">
+        <rdfs:range rdf:resource="https://w3id.org/ontoindire/ontoschool/Sezione"/>
+        <rdfs:label xml:lang="it">frequenta sezione (NON USATO)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/haClasse -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontoindire/ontoschool/haClasse">
+        <rdfs:domain rdf:resource="https://w3id.org/ontoindire/ontoschool/Plesso"/>
+        <rdfs:range rdf:resource="https://w3id.org/ontoindire/ontoschool/Classe"/>
+        <rdfs:label xml:lang="it">ha classe</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/haEta -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontoindire/ontoschool/haEta">
+        <rdfs:range rdf:resource="https://w3id.org/ontoindire/ontoschool/Eta"/>
+        <rdfs:label xml:lang="it">ha età</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/haPerRiferimento -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontoindire/ontoschool/haPerRiferimento">
+        <rdfs:label xml:lang="it">ha per riferimento (NON USATO)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/haSezione -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontoindire/ontoschool/haSezione">
+        <rdfs:domain rdf:resource="https://w3id.org/ontoindire/ontoschool/Plesso"/>
+        <rdfs:range rdf:resource="https://w3id.org/ontoindire/ontoschool/Sezione"/>
+        <rdfs:label xml:lang="it">ha sezione</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/iscrittoA -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontoindire/ontoschool/iscrittoA">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/CPV/Person"/>
+        <rdfs:range rdf:resource="https://w3id.org/ontoindire/ontoschool/EnteEducativo"/>
+        <rdfs:label xml:lang="it">iscritto a</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/partecipaA -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontoindire/ontoschool/partecipaA">
+        <rdfs:label xml:lang="it">partecipa a</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/redige -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontoindire/ontoschool/redige">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
+        <rdfs:label xml:lang="it">redige</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/èErogatoDa -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontoindire/ontoschool/èErogatoDa">
+        <rdfs:range rdf:resource="https://w3id.org/ontoindire/ontoschool/Plesso"/>
+        <rdfs:label xml:lang="it">è erogato da</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/èamministratoDa -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontoindire/ontoschool/èamministratoDa">
+        <rdfs:label xml:lang="it">è amministrato da</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/italia/onto/COV/IPAcode -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/onto/COV/IPAcode">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/COV/PublicOrganization"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/UrlPianoTriennaleOffertaFormativa -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ontoindire/ontoschool/UrlPianoTriennaleOffertaFormativa">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/CPSV/referenceDoc"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ontoindire/ontoschool/PianoTriennaleOffertaFormativa"/>
+        <rdfs:comment xml:lang="it">Questa proprietà è utilizzata per indicare l&apos;URL cui reperire il Piano Triennale di Offerta Formativa. Tutti i PTOF sono disponibili come documenti pubblici sul sito Scuola in Chiaro del Ministero dell&apos;Istruzione.</rdfs:comment>
+        <rdfs:label xml:lang="it">url PTOF</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/UrlRapportoAutoValutazione -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ontoindire/ontoschool/UrlRapportoAutoValutazione">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/CPSV/referenceDoc"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ontoindire/ontoschool/RapportoAutoValutazione"/>
+        <rdfs:comment xml:lang="it">Questa proprietà è utilizzata per indicare l&apos;URL cui reperire il Rapporto di Autovalutazione. Tutti i RAV sono disponibili come documenti pubblici sul sito Scuola in Chiaro del Ministero dell&apos;Istruzione.</rdfs:comment>
+        <rdfs:label xml:lang="it">url RAV</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/codiceMeccanografico -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ontoindire/ontoschool/codiceMeccanografico">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/COV/Organization"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="itcodice meccanografico">Il Ministero dell’Istruzione attribuisce alle istituzioni scolastiche, alle scuole statali e alle scuole paritarie un codice di identificazione, il cosiddetto codice meccanografico. Non è previsto codice meccanografico per gli enti educativi di riferimento delle scuole paritarie. Dal momento che la composizione di tale codice dipende, per esempio, dalla provincia in cui ha sede l’organizzazione, esso può variare nel tempo.</rdfs:comment>
+        <rdfs:label xml:lang="it">codice meccanografico</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/daEta -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ontoindire/ontoschool/daEta">
+        <rdfs:label xml:lang="it">da eta</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/finoEta -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ontoindire/ontoschool/finoEta">
+        <rdfs:label xml:lang="it">fino eta</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/obbligatorieta -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ontoindire/ontoschool/obbligatorieta">
+        <rdfs:label xml:lang="it">obbligatorietà</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/italia/onto/COV/Group -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/COV/Group"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/COV/LegalStatus -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/COV/LegalStatus"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/COV/Organization -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/COV/Organization"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/COV/PrivateOrganization -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/COV/PrivateOrganization">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontoindire/ontoschool/PersonaGiuridicaPrivata"/>
+        <rdfs:label xml:lang="it">Azienda</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/italia/onto/COV/PublicOrgActivityType -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/COV/PublicOrgActivityType"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/COV/PublicOrganization -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/COV/PublicOrganization">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/COV/Organization"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/COV/hasPublicOrgActivityType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/COV/PublicOrgActivityType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/COV/hasCategory"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/italia/onto/COV/PublicOrganizationCategory"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/COV/IPAcode"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://w3id.org/ontoindire/ontoschool/PersonaGiuridicaPrivata"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;organizzazione pubblica. Una pubblica amministrazione e qualsiasi altra organizzazione di nautra pubblica può essere modellata utilizzando questa classe. In generale,  individui di questa classe sono organizzazioni registrate presso l&apos;Indice della PA (IPA).
+Questa classe deriva dall&apos;analoga classe del Core Public Organization Vocabulary.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a public organization. Thus, a public administration is a public organization. Any other organization that is defined public can be modelled using this class.
+This class is derived from the Core Public Organization Vocabulary.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/italia/onto/COV"/>
+        <rdfs:label xml:lang="it">Amministrazione pubblica</rdfs:label>
+        <rdfs:label xml:lang="en">Public Organization</rdfs:label>
+        <rdfs:label xml:lang="it">organizzazione pubblica</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <prov:wasDerivedFrom rdf:resource="http://data.europa.eu/m8g/PublicOrganisation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/italia/onto/COV/PublicOrganizationCategory -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/COV/PublicOrganizationCategory"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/CPSV/PublicService -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/CPSV/PublicService"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/CPV/Person -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/CPV/Person"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/RO/Role -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/RO/Role"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/RO/TimeIndexedRole -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/RO/TimeIndexedRole"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/TI/TemporalEntity -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/TI/TemporalEntity"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/TI/Year -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/TI/Year"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/Agent -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Agent"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/Characteristic -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Characteristic"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/Concept -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Concept"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/Object -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Object"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/System -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/System"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/Topic -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Topic"/>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/Adulto -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/Adulto">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/CPV/Person"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/daEta"/>
+                <owl:hasValue>18 anni</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/Alunno -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/Alunno">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/CPV/Person"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/RO/isRoleIn"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/ontoindire/ontoschool/FrequenzaScolastica"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/RO/isRoleOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/CPV/Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/AmministrazioneCentrale -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/AmministrazioneCentrale">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/COV/PublicOrganization"/>
+        <rdfs:comment xml:lang="it">Classe che contempla un solo individuo: Stato Italiano.</rdfs:comment>
+        <rdfs:label xml:lang="it">Amministrazione centrale</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/AmministrazioneLocale -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/AmministrazioneLocale">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/COV/PublicOrganization"/>
+        <rdfs:comment xml:lang="it">Sono amministrazioni locali i Comuni, le Province, le Regioni, le Città Metrololitane e leUnioni di Comuni.</rdfs:comment>
+        <rdfs:label xml:lang="it">Amministrazione locale</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/AnnoScolastico -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/AnnoScolastico">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/TI/TemporalEntity"/>
+        <rdfs:comment xml:lang="it">Rappresenta la durata di un anno nell&apos;ambito della scuola.
+Solitamente comprende parti di due anni solari: per esempio, l&apos;anno scolastico 2021-22 parte, in Italia, dall&apos;autunno del 2021 e termina a giugno del 2022.
+Solitamente si indica nei seguenti formati: 2021-2022, 2021-22, 20212022, 202122, ecc...</rdfs:comment>
+        <rdfs:label xml:lang="it">Anno scolastico</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/CentroProvincialeIstruzioneAdulti -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/CentroProvincialeIstruzioneAdulti">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontoindire/ontoschool/IstituzioneScolastica"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/amministra"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://w3id.org/ontoindire/ontoschool/CentroTerritoriale"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/amministra"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://w3id.org/ontoindire/ontoschool/ScuolaPrimaria"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/amministra"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://w3id.org/ontoindire/ontoschool/ScuolaSecondariaPrimoGrado"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/collaboraCon"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/ontoindire/ontoschool/EnteEducativo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/partecipaA"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/ontoindire/ontoschool/PrimoCiclo"/>
+                            <rdf:Description rdf:about="https://w3id.org/ontoindire/ontoschool/SecondoCicloObbligatorio"/>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/daEta"/>
+                <owl:hasValue>16 anni</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">L&apos;istruzione degli adulti è promossa dai CPIA (Centri provinciali per l&apos;Istruzione degli Adulti) istituiti con il decreto del Presidente della Repubblica 263 del 29 ottobre 2012. Costituiscono una tipologia di istituzione scolastica autonoma dotata di un proprio organico e di uno specifico assetto didattico e organizzativo.
+I CPIA sono articolati in &quot;reti territoriali di servizio&quot; strutturate su tre livelli:
+- Livello A: unità amministrativa;
+- Livello B: unità didattica;
+- Livello C: unità formativa.
+
+Livello A: unità amministrativa
+Il CPIA si articola, dal punto di vista amministrativo, in una sede centrale e in punti di erogazione del servizio di primo livello (sedi associate) dove si realizzano percorsi di primo livello (primo ciclo + obbligo formativo) e percorsi di alfabetizzazione e apprendimento della lingua italiana; tali punti di erogazione di primo livello sono individuati dalle Regioni.
+
+Livello B: unità didattica
+Il CPIA, dal punto di vista organizzativo-didattico, si riferisce alle istituzioni scolastiche di secondo grado che erogano percorsi di istruzione degli adulti di secondo livello (secondo ciclo secondo grado); tali punti di erogazione di secondo livello sono “incardinati” nelle istituzioni scolastiche secondarie di secondo grado (sedi operative) individuate dalle Regioni.
+Il CPIA, in quanto unità amministrativa, stipula specifici accordi di rete (secondo l’articolo 7 del decreto del Presidente della Repubblica 275 del 1999) con le suddette istituzioni scolastiche per definire:
+- criteri e modalità per la progettazione comune organizzativo-didattica dei percorsi di secondo livello;
+- la costituzione e il funzionamento della commissione per la definizione del patto formativo individuale;
+- la realizzazione di specifiche misure di sistema destinate, altresì, a favorire gli opportuni raccordi tra i percorsi di istruzione di primo e di secondo livello, anche attraverso l&apos;uso delle nuove tecnologie.
+
+Livello C: unità formativa
+Il CPIA può ampliare l&apos;offerta formativa stipulando accordi con gli enti locali e altri soggetti pubblici e privati, con particolare riferimento alle strutture formative accreditate dalle Regioni; si tratta di iniziative per potenziare le competenze di cittadinanza e quindi l&apos;occupabilità della popolazione.
+
+Il CPIA, in quanto rete territoriale di servizio articolata su tre livelli, svolge le seguenti attività:
+1. percorsi di istruzione degli adulti finalizzati al conseguimento di titoli di studio e certificazioni;
+2. iniziative di ampliamento dell&apos;offerta formativa finalizzate a integrare ed arricchire i percorsi d&apos;istruzione degli adulti e/o favorire il raccordo con altre tipologie di percorsi d&apos;istruzione e formazione;
+3. attività di ricerca sperimentazione e sviluppo, in materia di istruzione degli adulti, finalizzate - fra l&apos;altro - a valorizzare il ruolo del CPIA quale “struttura di servizio”.
+
+1. Percorsi d&apos;istruzione degli adulti
+I percorsi di istruzione degli adulti sono organizzati nelle seguenti tre tipologie:
+- percorsi d&apos;istruzione di primo livello;
+- percorsi di istruzione di secondo livello;
+- percorsi di alfabetizzazione e apprendimento della lingua italiana.
+
+I percorsi di primo livello, realizzati dai CPIA unità amministrativa, sono suddivisi in due periodi didattici:
+a. il primo permette di conseguire il titolo di studio conclusivo del primo ciclo;
+b. il secondo permette di conseguire la certificazione attestante l&apos;acquisizione delle competenze di base connesse all&apos;obbligo di istruzione relative alle attività e insegnamenti generali comuni a tutti gli indirizzi degli istituti professionali e degli istituti tecnici.
+
+I percorsi di secondo livello, realizzati dai CPIA unità didattica, permettono di conseguire il diploma di istruzione tecnica, professionale e artistica. Sono suddivisi in tre periodi didattici rispettivamente riferiti al primo biennio, secondo biennio e quinto anno dei corrispondenti ordinamenti degli istituti tecnici, professionali e artistici.
+
+I percorsi di alfabetizzazione e apprendimento della lingua italiana, realizzati dai CPIA unità amministrativa, permettono di conseguire un titolo attestante il raggiungimento di un livello di conoscenza della lingua italiana non inferiore al livello A2 del Quadro comune europeo di riferimento per la conoscenza delle lingue, elaborato dal Consiglio d’Europa.
+
+2. Iniziative di ampliamento dell&apos;offerta formativa
+Le iniziative di ampliamento dell’offerta formativa - in linea con quanto previsto dall’articolo 9 del D.P.R. 275 del 1999 - consistono in attività coerenti con le finalità del CPIA e che tengono conto delle esigenze del contesto culturale, sociale ed economico delle realtà locali. A tal fine i CPIA promuovono progetti integrati di istruzione e formazione, che richiedono la collaborazione con altre agenzie formative pubbliche e private, anche partecipando a programmi regionali, nazionali o comunitari. Il CPIA può:
+- stipulare convenzioni con università, Regioni ed enti pubblici;
+- stipulare intese contrattuali con associazioni e privati;
+- partecipare ad associazioni temporanee con agenzie pubbliche e private che realizzino collaborazioni sinergiche per l&apos;attuazione di particolari progetti di formazione.
+
+3. Attività di Ricerca, Sperimentazione e Sviluppo (RS&amp;S)
+Il CPIA in quanto istituzione scolastica autonoma svolge anche attività di Ricerca, Sperimentazione e Sviluppo (RS&amp;S) in materia di istruzione degli adulti.</rdfs:comment>
+        <rdfs:label xml:lang="it">CPIA</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/CentroTerritoriale -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/CentroTerritoriale">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontoindire/ontoschool/Plesso"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/èamministratoDa"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/ontoindire/ontoschool/CentroProvincialeIstruzioneAdulti"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="it">Centro territoriale</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/CircoloDidattico -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/CircoloDidattico">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontoindire/ontoschool/IstituzioneScolastica"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/amministra"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://w3id.org/ontoindire/ontoschool/ScuolaInfanzia"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/amministra"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://w3id.org/ontoindire/ontoschool/ScuolaPrimaria"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Istituzione scolastica cui fanno riferimento uno o più plessi di scuola dell&apos;infanzia e uno più plessi di scuola primaria.</rdfs:comment>
+        <rdfs:label xml:lang="it">Circolo didattico</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/Classe -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/Classe">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/COV/Group"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
+        <rdfs:label xml:lang="it">Classe</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/DirettoreServiziGeneraliAmministrativi -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/DirettoreServiziGeneraliAmministrativi">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontoindire/ontoschool/RisorsaUmana"/>
+        <rdfs:label xml:lang="it">DSGA</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/DirigenteScolastico -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/DirigenteScolastico">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontoindire/ontoschool/RisorsaUmana"/>
+        <rdfs:label xml:lang="it">Dirigente scolastico</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/Dirigenza_scolastica -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/Dirigenza_scolastica">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontoindire/ontoschool/EsperienzaLavorativa"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/RO/forEntity"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/ontoindire/ontoschool/IstituzioneScolastica"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/RO/withRole"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/ontoindire/ontoschool/DirigenteScolastico"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="it">Dirigenza scolastica</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/DisciplinaScolastica -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/DisciplinaScolastica">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Topic"/>
+        <rdfs:label xml:lang="it">Disciplina scolastica</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/Docente -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/Docente">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontoindire/ontoschool/RisorsaUmana"/>
+        <rdfs:label xml:lang="it">Docente</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/EducazioneInfantile -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/EducazioneInfantile">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontoindire/ontoschool/SottosistemaEducativo"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/duration"/>
+                <owl:hasValue>3 anni</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/daEta"/>
+                <owl:hasValue>3 mesi</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Il sistema di educazione infantile italiano attuale è denominato Sistema Integrato 0-6 anni; non è obbligatorio, dura 6 anni ed è articolato in
+- servizi educativi per l’infanzia¸ gestiti dagli Enti locali, direttamente o attraverso la stipula di convenzioni, da altri enti pubblici o dai privati, che accolgono i bambini tra i 3 e i 36 mesi;
+- scuola dell’infanzia, che può essere gestita dallo Stato, dagli enti locali, direttamente o attraverso la stipula di convenzioni, da altri enti pubblici o dai privati, che accoglie i bambini tra i 3 e i 6 anni.</rdfs:comment>
+        <rdfs:label xml:lang="it">Educazione infantile</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/EnteEducativo -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/EnteEducativo">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/italia/onto/COV/Organization"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/amministra"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://w3id.org/ontoindire/ontoschool/Plesso"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/partecipaA"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://w3id.org/ontoindire/ontoschool/SottosistemaEducativo"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="it">Organizzazione che partecipa ad almeno un sottosistema educativo.</rdfs:comment>
+        <rdfs:label xml:lang="it">Ente educativo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/EnteEducativoPrivato -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/EnteEducativoPrivato">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/ontoindire/ontoschool/EnteEducativo"/>
+                    <rdf:Description rdf:about="https://w3id.org/ontoindire/ontoschool/PersonaGiuridicaPrivata"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:label xml:lang="it">Ente educativo privato</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/EsperienzaLavorativa -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/EsperienzaLavorativa">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/RO/forEntity"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/COV/Organization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/hasTemporalEntity"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/TI/Duration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/RO/isRoleInTimeOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/CPV/Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/RO/withRole"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/ontoindire/ontoschool/RisorsaUmana"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="it">Esperienza lavorativa</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/Eta -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/Eta">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
+        <rdfs:label xml:lang="it">Età</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/FrequenzaScolastica -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/FrequenzaScolastica">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/RO/forEntity"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/ontoindire/ontoschool/ScuolaPrimaria"/>
+                            <rdf:Description rdf:about="https://w3id.org/ontoindire/ontoschool/ScuolaSecondariaPrimoGrado"/>
+                            <rdf:Description rdf:about="https://w3id.org/ontoindire/ontoschool/ScuolaSecondariaSecondoGrado"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/RO/isRoleInTimeOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/CPV/Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/RO/withRole"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/ontoindire/ontoschool/Alunno"/>
+                            <rdf:Description rdf:about="https://w3id.org/ontoindire/ontoschool/Studente"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/hasTemporalEntity"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/ontoindire/ontoschool/AnnoScolastico"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="it">Frequenza scolastica</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/Iscritto -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/Iscritto">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/CPV/Person"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/RO/isRoleIn"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/ontoindire/ontoschool/IscrizioneScolasica"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/RO/isRoleOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/CPV/Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/IscrizioneScolasica -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/IscrizioneScolasica">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/RO/forEntity"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/ontoindire/ontoschool/EnteEducativo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/RO/isRoleInTimeOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/CPV/Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/RO/withRole"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/ontoindire/ontoschool/Iscritto"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/hasTemporalEntity"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/ontoindire/ontoschool/AnnoScolastico"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="it">Iscrizione scolastica</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/IstitutoComprensivo -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/IstitutoComprensivo">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontoindire/ontoschool/IstituzioneScolastica"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/amministra"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://w3id.org/ontoindire/ontoschool/ScuolaInfanzia"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/amministra"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://w3id.org/ontoindire/ontoschool/ScuolaPrimaria"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/amministra"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://w3id.org/ontoindire/ontoschool/ScuolaSecondariaPrimoGrado"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Istituzione scolsatico cui fanno riferimento uno o più plessi di scuola dell&apos;infanzia, uno più plessi di scuola primaria e uno o più plessi di scuola secondaria di primo grado.</rdfs:comment>
+        <rdfs:label xml:lang="it">Istituto comprensivo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/IstitutoOmnicomprensivo -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/IstitutoOmnicomprensivo">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontoindire/ontoschool/IstituzioneScolastica"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/partecipaA"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/ontoindire/ontoschool/PrimoCiclo"/>
+                            <rdf:Description rdf:about="https://w3id.org/ontoindire/ontoschool/SecondoCiclo"/>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Istituzione scolastica alla quale fanno riferimento un istituto del primo ciclo ed uno del secondo ciclo d&apos;istruzione.</rdfs:comment>
+        <rdfs:label xml:lang="it">Istituto omnicomprensivo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/IstituzioneScolastica -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/IstituzioneScolastica">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/italia/onto/COV/PublicOrganization"/>
+                    <rdf:Description rdf:about="https://w3id.org/ontoindire/ontoschool/EnteEducativo"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/èamministratoDa"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/ontoindire/ontoschool/StatoItaliano"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/redige"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/ontoindire/ontoschool/PianoTriennaleOffertaFormativa"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/codiceMeccanografico"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Un&apos;istituzione scolastica è un&apos;organizzazione statale che partecipa al sistema educativo.
+
+Nata a seguito del dimensionamento scolastico, è una entità amministrativa retta da un dirigente scolastico e gode di personalità giuridica ed autonomia sia didattica che organizzativa.
+Può avere più punti di erogazione del servizio (punti cioè dove viene erogato il servizio scolastico, come ad esempio scuole dell&apos;infanzia, plessi di scuola primaria, ecc..).</rdfs:comment>
+        <rdfs:label xml:lang="it">Istituzione scolastica</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/IstruzioneFormazioneProfessionale -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/IstruzioneFormazioneProfessionale">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontoindire/ontoschool/SecondoCiclo"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/duration"/>
+                        <owl:hasValue>3 anni</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/duration"/>
+                        <owl:hasValue>4 anni</owl:hasValue>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Il sistema di istruzione e formazione professionale (IeF.P.) si articola in percorsi di durata triennale e quadriennale, finalizzati al conseguimento, rispettivamente, di qualifiche e diplomi professionali.
+
+Le qualifiche e i diplomi professionali, di competenza regionale, sono riconosciuti e spendibili a livello nazionale e comunitario, in quanto compresi in un apposito Repertorio nazionale, condiviso tra Stato e Regioni con Accordi del 27 luglio 2011 e del 19 gennaio 2012. A partire dai 15 anni di età, si può conseguire una qualifica professionale anche attraverso l&apos;apprendistato di I livello (D.Lgs. 167/2011 art. 3), così come regolato dall&apos;Accordo in Conferenza Stato Regioni del 15 marzo 2012. 
+
+Al termine dei primi due anni, inoltre, viene rilasciato, su richiesta dello studente, il certificato delle competenze di base acquisite nell&apos;assolvimento dell’obbligo di istruzione.
+
+Le modalità organizzative e le metodologie di realizzazione dei percorsi prevedono attività di stage, di laboratorio e di tirocinio e si caratterizzano per flessibilità e personalizzazione.
+
+I percorsi IeFP sono realizzati dalle strutture formative accreditate dalle Regioni, secondo criteri condivisi a livello nazionale, oppure dagli istituti professionali, in regime di sussidiarietà, se previsto dalla programmazione regionale, ai sensi dell’Intesa in Conferenza unificata del 16 dicembre 2010.</rdfs:comment>
+        <rdfs:label xml:lang="it">IeFP</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/IstruzionePrimaria -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/IstruzionePrimaria">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontoindire/ontoschool/PrimoCiclo"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/duration"/>
+                <owl:hasValue>5 anni</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/daEta"/>
+                <owl:hasValue>6 anni</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="it">Istruzione primaria</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/IstruzioneProfessionale -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/IstruzioneProfessionale">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontoindire/ontoschool/PercorsoIstruzione"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/attivatoDa"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/ontoindire/ontoschool/ScuolaSecondariaSecondoGrado"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="it">Istruzione professionale</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/IstruzioneSecondariaPrimoGrado -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/IstruzioneSecondariaPrimoGrado">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontoindire/ontoschool/PrimoCiclo"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/duration"/>
+                <owl:hasValue>3 anni</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/daEta"/>
+                <owl:hasValue>11 anni</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="it">Istruzione secondaria di primo grado</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/IstruzioneSecondariaSecondoGrado -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/IstruzioneSecondariaSecondoGrado">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontoindire/ontoschool/SecondoCiclo"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/duration"/>
+                <owl:hasValue>5 anni</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="it">Istruzione secondaria di secondo grado</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/IstruzioneTecnica -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/IstruzioneTecnica">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontoindire/ontoschool/PercorsoIstruzione"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/attivatoDa"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/ontoindire/ontoschool/ScuolaSecondariaSecondoGrado"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="it">Istruzione tecnica</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/Liceo -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/Liceo">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontoindire/ontoschool/PercorsoIstruzione"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/attivatoDa"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/ontoindire/ontoschool/ScuolaSecondariaSecondoGrado"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="it">Liceo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/PercorsoIeFP -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/PercorsoIeFP">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontoindire/ontoschool/PercorsoIstruzione"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/attivatoDa"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/ontoindire/ontoschool/ScuolaSecondariaSecondoGrado"/>
+                            <rdf:Description rdf:about="https://w3id.org/ontoindire/ontoschool/StrutturaFormativaAccreditata"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="it">Percorso IeFP</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/PercorsoIstruzione -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/PercorsoIstruzione">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Concept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/attivatoDa"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/ontoindire/ontoschool/EnteEducativo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="it">Percorso d istruzione</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/PersonaGiuridicaPrivata -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/PersonaGiuridicaPrivata">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/COV/Organization"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/COV/hasLegalStatus"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/italia/onto/COV/LegalStatus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="it">Persona giuridica di diritto privato</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/PianoTriennaleOffertaFormativa -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/PianoTriennaleOffertaFormativa">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/UrlPianoTriennaleOffertaFormativa"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Le istituzioni scolastiche statali redigono ogni tre anni il proprio Piano Triennale dell’Offerta Formativa, il cosiddetto PTOF. Si tratta di un documento pubblico identificativo della scuola, con finalità organizzative e informative, contenente un’indicazione chiara e dettagliata relativa a contesto, obiettivi, linea d’azione e mezzi a disposizione per raggiungerli. Per le scuole paritarie il PTOF è redatto, invece, a livello di singola scuola. @@@ DUBBIO!</rdfs:comment>
+        <rdfs:label xml:lang="it">PTOF</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/Plesso -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/Plesso">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/italia/onto/COV/Organization"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/eroga"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://w3id.org/ontoindire/ontoschool/ServizioEducativo"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/èamministratoDa"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="https://w3id.org/ontoindire/ontoschool/EnteEducativo"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/haClasse"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/ontoindire/ontoschool/Classe"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/haSezione"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/ontoindire/ontoschool/Sezione"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/codiceMeccanografico"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Detti anche PES, ossia Punti di Erogazione del Servizio scolastico, sono le organizzazioni in cui viene effettivamente erogato il servizio pubblico educativo.</rdfs:comment>
+        <rdfs:label xml:lang="it">Plesso</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/PrimoCiclo -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/PrimoCiclo">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontoindire/ontoschool/SottosistemaEducativo"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/duration"/>
+                <owl:hasValue>8 anni</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/daEta"/>
+                <owl:hasValue>6 anni</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/obbligatorieta"/>
+                <owl:hasValue>Sì</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Primo ciclo di istruzione, obbligatorio, della durata complessiva di 8 anni, articolato in:
+- scuola primaria¸ di durata quinquennale, per le alunne e gli alunni da 6 a 11 anni;
+- scuola secondaria di primo grado, di durata triennale, per le alunne e gli alunni da 11 a 14 anni.</rdfs:comment>
+        <rdfs:label xml:lang="it">Primo ciclo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/RapportoAutoValutazione -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/RapportoAutoValutazione">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/UrlRapportoAutoValutazione"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Le scuole subiscono un processo di valutazione da parte dello Stato. Lo strumento che accompagna e documenta questa fase è il Rapporto di Autovalutazione (RAV), un documento pubblico di autovalutazione che fornisce una rappresentazione dell’organizzazione attraverso un’analisi del suo funzionamento e costituisce la base per individuare le priorità di sviluppo verso cui orientare un miglioramento. Anche in questo caso, il RAV è redatto a livello di istituzione per le scuole statali e a livello di scuola per le paritarie. @@@ DUBBIO!</rdfs:comment>
+        <rdfs:label xml:lang="it">RAV</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/RisorsaATA -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/RisorsaATA">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontoindire/ontoschool/RisorsaUmana"/>
+        <rdfs:label xml:lang="it">Risorsa ATA</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/RisorsaUmana -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/RisorsaUmana">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/RO/TimeIndexedRole"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/RO/isRoleIn"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/ontoindire/ontoschool/EsperienzaLavorativa"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/RO/isRoleOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/ontoindire/ontoschool/Adulto"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>inserire lavora presso...</rdfs:comment>
+        <rdfs:label xml:lang="it">Risorsa umana</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/ScuolaIeFP -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/ScuolaIeFP">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontoindire/ontoschool/Plesso"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/partecipaA"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/ontoindire/ontoschool/IstruzioneFormazioneProfessionale"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/haClasse"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/ontoindire/ontoschool/Classe"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/haClasse"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">4</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/ontoindire/ontoschool/Classe"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="it">Scuola IeFP</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/ScuolaInfanzia -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/ScuolaInfanzia">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/ontoindire/ontoschool/Plesso"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/ontoindire/ontoschool/ScuolaParitaria"/>
+                            <rdf:Description rdf:about="https://w3id.org/ontoindire/ontoschool/ScuolaStatale"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/partecipaA"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/ontoindire/ontoschool/EducazioneInfantile"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/haClasse"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/ontoindire/ontoschool/Classe"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/daEta"/>
+                <owl:hasValue>3 anni</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/finoEta"/>
+                <owl:hasValue>5 anni</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="it">Scuola dell infanzia</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/ScuolaParitaria -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/ScuolaParitaria">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/ontoindire/ontoschool/Plesso"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/èamministratoDa"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://w3id.org/ontoindire/ontoschool/EnteEducativo"/>
+                                    <owl:Class>
+                                        <owl:complementOf rdf:resource="https://w3id.org/ontoindire/ontoschool/IstituzioneScolastica"/>
+                                    </owl:Class>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:onClass>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/redige"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/ontoindire/ontoschool/PianoTriennaleOffertaFormativa"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Le scuole paritarie sono scuole non statali che svolgono un servizio pubblico e sono inserite nel sistema nazionale educativo. Per gli iscritti, la regolare frequenza della scuola paritaria costituisce assolvimento dell&apos;obbligo di istruzione.
+
+Il riconoscimento della parità garantisce:
+- l&apos;equiparazione dei diritti e dei doveri degli iscritti;
+- le medesime modalità di svolgimento degli esami di Stato;
+- l&apos;abilitazione a rilasciare titoli di studio aventi lo stesso valore legale delle scuole statali.
+
+Le scuole paritarie sono, dunque, abilitate a rilasciare titoli di studio aventi lo stesso valore legale di quelli delle corrispondenti scuole statali. Inoltre, hanno piena libertà per quanto concerne l&apos;orientamento culturale e l&apos;indirizzo pedagogico-didattico e usufruiscono di un più favorevole trattamento fiscale se non hanno fini di lucro.</rdfs:comment>
+        <rdfs:label xml:lang="it">Scuola paritaria</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/ScuolaPrimaria -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/ScuolaPrimaria">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/ontoindire/ontoschool/Plesso"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/ontoindire/ontoschool/ScuolaParitaria"/>
+                            <rdf:Description rdf:about="https://w3id.org/ontoindire/ontoschool/ScuolaStatale"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/partecipaA"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/ontoindire/ontoschool/IstruzionePrimaria"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/haClasse"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/ontoindire/ontoschool/Classe"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="it">Scuola primaria</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/ScuolaSecondariaPrimoGrado -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/ScuolaSecondariaPrimoGrado">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/ontoindire/ontoschool/Plesso"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/ontoindire/ontoschool/ScuolaParitaria"/>
+                            <rdf:Description rdf:about="https://w3id.org/ontoindire/ontoschool/ScuolaStatale"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/partecipaA"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/ontoindire/ontoschool/IstruzioneSecondariaPrimoGrado"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/haClasse"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/ontoindire/ontoschool/Classe"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="it">Scuola secondaria di primo grado</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/ScuolaSecondariaSecondoGrado -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/ScuolaSecondariaSecondoGrado">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/ontoindire/ontoschool/Plesso"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/ontoindire/ontoschool/ScuolaParitaria"/>
+                            <rdf:Description rdf:about="https://w3id.org/ontoindire/ontoschool/ScuolaStatale"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/attiva"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/ontoindire/ontoschool/PercorsoIstruzione"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/partecipaA"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/ontoindire/ontoschool/IstruzioneSecondariaSecondoGrado"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/haClasse"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/ontoindire/ontoschool/Classe"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="it">Scuola secondaria di secondo grado</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/ScuolaStatale -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/ScuolaStatale">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/ontoindire/ontoschool/Plesso"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/èamministratoDa"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="https://w3id.org/ontoindire/ontoschool/IstituzioneScolastica"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="it">Le scuole statali sono i plessi scolastici gestiti da un&apos;istittuzione scolastica statale.</rdfs:comment>
+        <rdfs:label xml:lang="it">Scuola statale</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/SecondoCiclo -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/SecondoCiclo">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontoindire/ontoschool/SottosistemaEducativo"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/duration"/>
+                        <owl:hasValue>3 anni</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/duration"/>
+                        <owl:hasValue>4 anni</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/duration"/>
+                        <owl:hasValue>5 anni</owl:hasValue>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/daEta"/>
+                <owl:hasValue>14 anni</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Secondo ciclo di istruzione articolato in due tipologie di percorsi:
+- scuola secondaria di secondo grado, di durata quinquennale, per le studentesse e gli studenti che hanno concluso positivamente il primo ciclo di istruzione; le scuole organizzano percorsi di liceo, di istituti tecnici e di istituti professionali per le studentesse e gli studenti da 14 a 19 anni;
+- percorsi triennali e quadriennali di istruzione e formazione professionale (IeFP) di competenza regionale, rivolti sempre alle studentesse e agli studenti che hanno concluso positivamente il primo ciclo di istruzione.</rdfs:comment>
+        <rdfs:label xml:lang="it">Secondo ciclo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/SecondoCicloObbligatorio -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/SecondoCicloObbligatorio">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontoindire/ontoschool/SecondoCiclo"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/duration"/>
+                <owl:hasValue>2 anni</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/daEta"/>
+                <owl:hasValue>14 anni</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/obbligatorieta"/>
+                <owl:hasValue>Sì</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="it">Secondo ciclo obbligatorio</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/ServizioEducativo -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/ServizioEducativo">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/CPSV/PublicService"/>
+        <rdfs:label xml:lang="it">Servizio educativo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/ServizioEducativoInfanzia -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/ServizioEducativoInfanzia">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontoindire/ontoschool/EnteEducativo"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/partecipaA"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/ontoindire/ontoschool/EducazioneInfantile"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/daEta"/>
+                <owl:hasValue>3 mesi</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/finoEta"/>
+                <owl:hasValue>36 mesi</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="it">Servizio educativo per l infanzia</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/Sezione -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/Sezione">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/COV/Group"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
+        <rdfs:label xml:lang="it">Sezione</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/SistemaEducativo -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/SistemaEducativo">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/System"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/compostoDa"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/ontoindire/ontoschool/SottosistemaEducativo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/compostoDa"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/ontoindire/ontoschool/SottosistemaEducativo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Il Sistema Educativo di Istruzione e di Formazione italiano (istanza di SistemaEducativo) è organizzato in base ai principi della sussidiarietà e dell&apos;autonomia delle istituzioni scolastiche.
+Lo Stato ha competenza legislativa esclusiva per le &quot;norme generali sull&apos;istruzione&quot; e per la determinazione dei livelli essenziali delle prestazioni che devono essere garantiti su tutto il territorio nazionale.
+Lo Stato, inoltre, definisce i principi fondamentali che le Regioni devono rispettare nell&apos;esercizio delle loro specifiche competenze.
+Le Regioni hanno potestà legislativa concorrente in materia di istruzione ed esclusiva in materia di istruzione e formazione professionale.
+Le istituzioni scolastiche statali hanno autonomia didattica, organizzativa e di ricerca, sperimentazione e sviluppo.
+
+Il sistema educativo è organizzato come segue:
+
+1.sistema integrato 0-6 anni, non obbligatorio, della durata complessiva di 6 anni, articolato in
+- servizi educativi per l’infanzia¸ gestiti dagli Enti locali, direttamente o attraverso la stipula di convenzioni, da altri enti pubblici o dai privati, che accolgono i bambini tra i 3 e i 36 mesi;
+- scuola dell’infanzia, gestita dallo Stato, dagli enti locali, direttamente o attraverso la stipula di convenzioni, da altri enti pubblici o da privati, che accoglie i bambini tra i 3 e i 6 anni;
+
+2.primo ciclo di istruzione, obbligatorio, della durata complessiva di 8 anni, articolato in
+- scuola primaria, di durata quinquennale, per le alunne e gli alunni da 6 a 11 anni;
+- scuola secondaria di primo grado, di durata triennale, per le alunne e gli alunni da 11 a 14 anni;
+
+3.secondo ciclo di istruzione articolato in due tipologie di percorsi:
+- scuola secondaria di secondo grado, di durata quinquennale, per le studentesse e gli studenti che hanno concluso positivamente il primo ciclo di istruzione; le scuole organizzano percorsi di liceo, di istituti tecnici e di istituti professionali per le studentesse e gli studenti da 14 a 19 anni;
+- percorsi triennali e quadriennali di istruzione e formazione professionale (IeFP) di competenza regionale, rivolti sempre alle studentesse e agli studenti che hanno concluso positivamente il primo ciclo di istruzione.
+
+4.istruzione superiore offerta dalle Università, dalle istituzioni dell&apos;Alta Formazione Artistica, Musicale e Coreutica (AFAM) e dagli Istituti Tecnici Superiori (ITS), con diverse tipologie di percorsi:
+- percorsi di istruzione terziaria offerti dalle università
+- percorsi di istruzione terziaria offerti dalle istituzioni dell&apos;AFAM (Alta Formazione Artistica, Musicale e Coreutica)
+- percorsi di formazione terziaria professionalizzante offerti dagli ITS (Istituti Tecnici Superiori)
+
+L&apos;istruzione obbligatoria ha la durata di 10 anni, da 6 a 16 anni di età, e comprende gli otto anni del primo ciclo di istruzione e i primi due anni del secondo ciclo (Legge 296 del 2006), che possono essere frequentati nella scuola secondaria di secondo grado – statale – o nei percorsi di istruzione e formazione professionale regionale.
+
+Inoltre, per tutti i giovani si applica il diritto/dovere di istruzione e formazione per almeno 12 anni o, comunque, sino al conseguimento di una qualifica professionale triennale entro il 18° anno di età in base a quanto previsto dalla legge n.53/2003.
+
+L&apos;istruzione obbligatoria può essere realizzata nelle scuole statali e nelle scuole paritarie (legge 62 del 2000), che costituiscono il sistema pubblico di istruzione, ma può essere assolta anche nelle scuole non paritarie (legge 27 del 2006) o attraverso l&apos;istruzione familiare. In questi ultimi due casi, però, l&apos;assolvimento dell&apos;obbligo di istruzione deve sottostare ad una serie di condizioni, quali l&apos;effettuazione di esami di idoneità.
+
+I genitori delle alunne e degli alunni, o chi esercita la responsabilità genitoriale, sono responsabili dell&apos;adempimento dell&apos;obbligo di istruzione dei minori, mentre alla vigilanza sull&apos;adempimento dell&apos;obbligo provvedono i Comuni di residenza e i dirigenti scolastici delle scuole in cui sono iscritti le alunne e gli alunni.
+
+A conclusione del periodo di istruzione obbligatoria, solitamente previsto al termine del secondo anno di scuola secondaria di secondo grado, in caso lo studente non prosegua gli stud, viene rilasciata una certificazione delle competenze acquisite (Decreto ministeriale 139 del 2007).
+
+Dopo il superamento dell&apos;esame di Stato conclusivo dell&apos;istruzione secondaria di secondo grado, lo studente può accedere ai corsi di istruzione terziaria (università, Afam e ITS). Alcuni corsi universitari sono a numero chiuso e gli studenti devono superare un test di accesso.
+
+Istruzione non statale
+
+L&apos;articolo 33 della Costituzione italiana stabilisce due principi fondamentali: l&apos;obbligo, per lo Stato, di offrire un sistema scolastico statale a tutti i giovani e il diritto, per le persone fisiche e giuridiche, di creare scuole e istituti di educazione senza oneri per lo Stato.
+
+Le scuole paritarie sono abilitate a rilasciare titoli di studio aventi lo stesso valore legale di quelli delle corrispondenti scuole statali; hanno piena libertà per quanto concerne l&apos;orientamento culturale e l&apos;indirizzo pedagogico-didattico e usufruiscono di un più favorevole trattamento fiscale se non hanno fini di lucro.</rdfs:comment>
+        <rdfs:label xml:lang="it">Sistema educativo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/SottosistemaEducativo -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/SottosistemaEducativo">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/ontoindire/ontoschool/SistemaEducativo"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/eParteDi"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/ontoindire/ontoschool/SistemaEducativo"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/eParteDi"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/ontoindire/ontoschool/SistemaEducativo"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:label xml:lang="it">Sottosistema educativo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/StrutturaFormativaAccreditata -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/StrutturaFormativaAccreditata">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontoindire/ontoschool/EnteEducativo"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/partecipaA"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/ontoindire/ontoschool/IstruzioneFormazioneProfessionale"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontoindire/ontoschool/accreditatoDa"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/ontoindire/ontoschool/AmministrazioneLocale"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Si tratta delle strutture formative, accreditate dalle Regioni, che realizzano percorsi di IeFP secondo criteri condivisi a livello nazionale.</rdfs:comment>
+        <rdfs:label xml:lang="it">Struttura formativa accreditata</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/Studente -->
+
+    <owl:Class rdf:about="https://w3id.org/ontoindire/ontoschool/Studente">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/CPV/Person"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/RO/isRoleIn"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/ontoindire/ontoschool/FrequenzaScolastica"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/RO/isRoleOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/CPV/Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/Alunno -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontoindire/ontoschool/Alunno">
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/RO/Role"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/Iscritto -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontoindire/ontoschool/Iscritto">
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/RO/Role"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/SistemaEducativoIstruzioneFormazioneItaliano -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontoindire/ontoschool/SistemaEducativoIstruzioneFormazioneItaliano">
+        <rdf:type rdf:resource="https://w3id.org/ontoindire/ontoschool/SistemaEducativo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/SistemaIntegrato0-6 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontoindire/ontoschool/SistemaIntegrato0-6">
+        <rdf:type rdf:resource="https://w3id.org/ontoindire/ontoschool/EducazioneInfantile"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/StatoItaliano -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontoindire/ontoschool/StatoItaliano">
+        <rdf:type rdf:resource="https://w3id.org/ontoindire/ontoschool/AmministrazioneCentrale"/>
+        <rdfs:label xml:lang="it">Stato Italiano</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/Studente -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontoindire/ontoschool/Studente">
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/RO/Role"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/10_anni -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontoindire/ontoschool/10_anni">
+        <rdf:type rdf:resource="https://w3id.org/ontoindire/ontoschool/Eta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/11_anni -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontoindire/ontoschool/11_anni">
+        <rdf:type rdf:resource="https://w3id.org/ontoindire/ontoschool/Eta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/13_anni -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontoindire/ontoschool/13_anni">
+        <rdf:type rdf:resource="https://w3id.org/ontoindire/ontoschool/Eta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/14_anni -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontoindire/ontoschool/14_anni">
+        <rdf:type rdf:resource="https://w3id.org/ontoindire/ontoschool/Eta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/15_anni -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontoindire/ontoschool/15_anni">
+        <rdf:type rdf:resource="https://w3id.org/ontoindire/ontoschool/Eta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/16_anni -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontoindire/ontoschool/16_anni">
+        <rdf:type rdf:resource="https://w3id.org/ontoindire/ontoschool/Eta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/17_anni -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontoindire/ontoschool/17_anni">
+        <rdf:type rdf:resource="https://w3id.org/ontoindire/ontoschool/Eta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/18_anni -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontoindire/ontoschool/18_anni">
+        <rdf:type rdf:resource="https://w3id.org/ontoindire/ontoschool/Eta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/19_anni -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontoindire/ontoschool/19_anni">
+        <rdf:type rdf:resource="https://w3id.org/ontoindire/ontoschool/Eta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/3_anni -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontoindire/ontoschool/3_anni">
+        <rdf:type rdf:resource="https://w3id.org/ontoindire/ontoschool/Eta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/3_mesi -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontoindire/ontoschool/3_mesi">
+        <rdf:type rdf:resource="https://w3id.org/ontoindire/ontoschool/Eta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/36_mesi -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontoindire/ontoschool/36_mesi">
+        <rdf:type rdf:resource="https://w3id.org/ontoindire/ontoschool/Eta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/5_anni -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontoindire/ontoschool/5_anni">
+        <rdf:type rdf:resource="https://w3id.org/ontoindire/ontoschool/Eta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontoindire/ontoschool/6_anni -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontoindire/ontoschool/6_anni">
+        <rdf:type rdf:resource="https://w3id.org/ontoindire/ontoschool/Eta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="https://w3id.org/ontoindire/ontoschool/Alunno">
+        <rdfs:label xml:lang="it">Alunno</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/ontoindire/ontoschool/Iscritto">
+        <rdfs:label xml:lang="it">Iscritto</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/ontoindire/ontoschool/Studente">
+        <rdfs:label xml:lang="it">Studente</rdfs:label>
+    </rdf:Description>
 </rdf:RDF>
 
 
