@@ -395,6 +395,16 @@
     
 
 
+    <!-- https://w3id.org/ontoindire/ontoschool/numeroClassi -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ontoindire/ontoschool/numeroClassi">
+        <rdfs:domain rdf:resource="https://w3id.org/ontoindire/ontoschool/Plesso"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="it">Il numero complessivo di classi nel plesso</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/ontoindire/ontoschool/obbligatorieta -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/ontoindire/ontoschool/obbligatorieta">
