@@ -1,0 +1,2 @@
+- [LODE](https://schema.gov.it/lode/extract?url=https://raw.githubusercontent.com/ontoindire/ontoschool/refs/heads/main/ontology.owl)
+- [diagram](https://drive.google.com/file/d/1Qmd1CR934GTfqu0fJcNV2QLuy7j9gOYZ/view?usp=sharing)
