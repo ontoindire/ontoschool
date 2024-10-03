@@ -413,6 +413,14 @@
     
 
 
+    <!-- https://w3id.org/ontoindire/ontoschool/versionePianoTriennaleOffertaFormativa -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ontoindire/ontoschool/versionePianoTriennaleOffertaFormativa">
+        <rdfs:domain rdf:resource="https://w3id.org/ontoindire/ontoschool/PianoTriennaleOffertaFormativa"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
